@@ -5,12 +5,13 @@
 @import (css) url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 @import '../../node_modules/@fortawesome/fontawesome-free/less/fontawesome';
 @import '../../node_modules/@fortawesome/fontawesome-free/less/solid';
+@import '../../node_modules/@fortawesome/fontawesome-free/less/brands';
 
 // Images
-@background:    url('~/img/COMMTOBIAH.png');
-@intro:         url('~/img/COMMTOBIAH.png');
-@image1:        url('~/img/genplex-b.png');
-@image2:        url('~/img/wf-cover.jpg');
+@background:    url('~/img/webp/logo5.webp');
+@intro:         url('~/img/webp/logo2.webp');
+@image1:        url('~/img/webp/logo_top-padded.webp');
+@image2:        url('~/img/webp/Magic_card_back_padded.webp');
 
 // colors
 @c-primary:     #039afc;
@@ -22,6 +23,7 @@
 body, html {   min-height: 100%; }
 
 body {
+  overflow-x: hidden;
   background-image: @background;
   background-size: cover;
   background-position: center center;
@@ -141,13 +143,13 @@ body {
 .server-info {
   margin-bottom: 150px;
   position: relative;
-  z-index: 20;
+  z-index: 10;
+  max-width: 100vw;
 }
   
 .inner {
   padding: 40px;
 }
-  
   
 section {
   .image {
@@ -200,17 +202,24 @@ section {
       }
     }
   }
+  
   &.discord-widget {
-    padding: 40px;
-    width: 100%;
+    
+    @media only screen and (max-width: 600px) {
+      padding: 40px;
+      width: 100vw;
+    }
+    
+    .text {
+      padding: 0 40px 0 0;
+    }
     
     iframe {
       height: 500px;
       float: right;
-      // width: 100%;
     }
   }
-      
+  
   &.join {
     padding: 40px;
     
@@ -236,11 +245,18 @@ section {
   .block {
     min-height: 200px;
     margin-right: 80px;
+    flex-wrap: wrap;
+    
+    @media only screen and (max-width: 600px) {
+      &:nth-of-type(2) {
+        margin-top: 40px;
+      }
+    }
   }
 
   p {
     max-width: 500px;
-    padding-top: 40px;
+    margin-top: 40px;
     margin-bottom: 0;
   }
 }
@@ -323,6 +339,39 @@ h6 {
   &.white {
     background: #fff;
     color: #4360AE;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .server-info > .social-links {
+    max-width: 50vw;
+    margin-left: -35vw;
+
+    .fa-5x {
+      font-size: 2.5em;
+    }
+  }
+  
+  .footer .block {
+    clear: left;
+  }
+}
+
+.btn-social {
+  padding: 0 25px;
+  text-align: center;
+  position: relative;
+  transition: all 300ms ease;
+  bottom: 0;
+  flex-direction: row!important;
+  
+  &:hover {
+    bottom: 10px;
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,0.28);
+  }
+  
+  &.white {
+    color: #fff;
   }
 }
     

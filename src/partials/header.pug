@@ -2,20 +2,17 @@
   nav.topmenu.d-flex.justify-content-center
     a(href=`${page === 'index' ? '#about' : '/index.pug'}` class=`${page === 'index' ? 'active' : ''}`) About
     .line.align-self-center
-    div.dropdown
-      a.dropdown-toggle(role='button' id='cmd-drop' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-        | Commands
-      div.dropdown-menu(aria-labelledby='cmd-drop')
-        a.dropdown-item(href='/commands/core.pug') Core
-        a.dropdown-item(href='/commands/util.pug') Utilities
-        a.dropdown-item(href='/commands/warframe.pug') Warframe
-    .line.align-self-center
-    a(href='https://discord.gg/DuFunUv' target='_blank') Join
-    .line.align-self-center
-    a(href='https://discordapp.com/api/oauth2/authorize?client_id=167095321740967937&scope=bot&permissions=806841424'  target='_blank')
-      | Invite
+    a(href='https://discord.gg/AuajBm2' target='_blank') Join
+    
   if page === 'index'
     .server-info.d-flex.align-items-center.flex-column.text-center
-      h1 Genesis
-      h2 Discord Bot
-      a.links-suppressor.join-btn.btn-pill.white(href='https://discord.gg/DuFunUv' target='_blank') Join Server
+      h1 The Canada Geeks
+      div.d-flex.flex-row.social-links
+        a.links-suppressor.btn-social.white(href='https://instagram.com/thecanadageeks')
+          i(class='fab fa-instagram fa-5x')
+        a.links-suppressor.btn-social.white(href='https://twitch.tv/thecanadageeks')
+          i(class='fab fa-twitch fa-5x')
+        a.links-suppressor.btn-social.white(href='https://discord.gg/AuajBm2')
+          i(class='fab fa-discord fa-5x')
+        a.links-suppressor.btn-social.white(href='https://www.patreon.com/Thecanadageeks')
+          i(class='fab fa-patreon fa-5x')
