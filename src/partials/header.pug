@@ -2,7 +2,21 @@
   nav.topmenu.d-flex.justify-content-center
     a(href=`${page === 'index' ? '#about' : '/index.pug'}` class=`${page === 'index' ? 'active' : ''}`) About
     .line.align-self-center
-    a(href='https://discord.gg/AuajBm2' target='_blank') Join
+    div.dropdown
+      a.dropdown-toggle(role='button' id='socials-drop' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+        | Socials
+      div.dropdown-menu(aria-labelledby='socials-drop')
+        a.dropdown-item(href='https://instagram.com/thecanadageeks' target='_blank') Instagram
+        a.dropdown-item(href='https://twitch.tv/thecanadageeks' target='_blank') Twitch
+        a.dropdown-item(href='https://discord.gg/AuajBm2' target='_blank') Discord
+        a.dropdown-item(href='https://www.patreon.com/Thecanadageeks' target='_blank') Patreon
+        a.dropdown-item(href='https://www.youtube.com/channel/UC-mPaBX05QnifMukKPy1t_Q' target='_blank') YouTube
+    .line.align-self-center
+    div.dropdown
+      a.dropdown-toggle(role='button' id='events-drop' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+        | Events
+      div.dropdown-menu(aria-labelledby='events-drop')
+        a.dropdown-item(href='/events/megabowl.pug') MegaBowl
     
   if page === 'index'
     .server-info.d-flex.align-items-center.flex-column.text-center

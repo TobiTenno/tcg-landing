@@ -1,0 +1,83 @@
+- const page = 'events'
+include ../mixins/card
+include ../mixins/user
+
+html
+  include ../partials/head.pug
+  head
+    title TCG | Events
+  body
+    .container.d-flex.flex-column
+      include ../partials/header.pug
+      .header.d-flex.flex-column.justify-content-between.align-items-center(class=`${page === 'index' ? 'index' : ''}`)
+        .server-info.d-flex.align-items-center.flex-column.text-center
+          h1 MegaBowl
+      
+      .inner.d-flex.flex-column
+        section.d-flex.justify-content-center.flex-wrap
+          .text.mx-auto
+            h3.text-center What is it? It's a big competition!
+            embed(
+              src="https://clips.twitch.tv/embed?clip=SourCrazyCakeUWot&parent=localhost"
+              frameborder="0"
+              allowfullscreen="false"
+              scrolling="no"
+              height="378"
+              width="620"
+              autoplay="false")
+
+          .text.mx-auto
+            h3.text-center When is this epic showdown?
+            p.text-center
+              | Each match time will be announced, along with the commanders that will be participating. The Tournament will be on August 1st.
+
+          .text.mx-auto
+            h3.text-center Creators you say?
+            p.text-center
+              | Of course! Several amazing Magic: The Gathering content creators will be sharing their time and creative energy to make some super cool, but not overly high-powered, EDH decks to bring Magic alive in a tournament.
+            p.text-center
+              | Each creator team will be choosing one of the commanders they spun the Mega Wheel for, and crafting a deck around them.
+            div.creators.text-center
+              div.creator.mb-5
+                h5 Cardboard Command &nbsp;
+                  a.links-suppressor(href="https://linktr.ee/cardboardcommand")
+                    i.fas.fa-external-link-alt.fa-sm
+                span
+                  +card('Dakkon Blackblade')
+                  | or
+                  +card('Ruhan of the Fomori')
+                  | or
+                  +card('Rona, Disciple of Gix')
+              div.creator.mb-5
+                h5 Elder Dragon Skypelander &nbsp;
+                  a.links-suppressor(href="https://linktr.ee/elderdragonskypelander")
+                    i.fas.fa-external-link-alt.fa-sm
+                span
+                  +card('Kambal, Consul of Allocation')
+                  | or
+                  +card('Ishkanah, Grafwidow')
+                  | or
+                  +card('Dalakos, Crafter of wonders')
+              div.creator.mb-5
+                h5 Into the 99 Podcast &nbsp;
+                  a.links-suppressor(href="https://linktr.ee/Intothe99")
+                    i.fas.fa-external-link-alt.fa-sm
+                span
+                  +card('Omnath, Locus of the Roil')
+                  | or
+                  +card('Sydri, Galvanic Genius')
+                  | or
+                  +card('Thantis the Warweaver')
+              div.creator.mb-5
+                h5 The Canada Geeks &nbsp;
+                  a.links-suppressor(href="https://linktr.ee/Thecanadageeks")
+                    i.fas.fa-external-link-alt.fa-sm
+                span
+                  +card('Sol\'kanar')
+                  | or
+                  +card('Feldon of the Third Path')
+                  | or
+                  +card('Rashmi, Eternities Crafter')
+
+
+      include ../partials/footer.pug
