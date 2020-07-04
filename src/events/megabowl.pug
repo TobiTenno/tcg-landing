@@ -11,28 +11,27 @@ html
       include ../partials/header.pug
       .header.d-flex.flex-column.justify-content-between.align-items-center(class=`${page === 'index' ? 'index' : ''}`)
         .server-info.d-flex.align-items-center.flex-column.text-center
-          h1 MegaBowl
+          h2 MegaBowl
       
       .inner.d-flex.flex-column
         section.d-flex.justify-content-center.flex-wrap
           .text.mx-auto
-            h3.text-center What is it? It's a big competition!
+            h4.text-center What is it? It's a big competition!
             embed(
               src="https://clips.twitch.tv/embed?clip=SourCrazyCakeUWot&parent=canadageeks.ml"
               frameborder="0"
-              allowfullscreen="false"
+              allowfullscreen="true"
               scrolling="no"
-              height="378"
-              width="620"
+              width="100%"
               autoplay="false")
 
           .text.mx-auto
-            h3.text-center When is this epic showdown?
+            h4.text-center When is this epic showdown?
             p.text-center
               | Each match time will be announced, along with the commanders that will be participating. The Tournament will be on August 1st.
 
           .text.mx-auto
-            h3.text-center Creators you say?
+            h4.text-center Creators you say?
             p.text-center
               | Of course! Several amazing Magic: The Gathering content creators will be sharing their time and creative energy to make some super cool, but not overly high-powered, EDH decks to bring Magic alive in a tournament.
             p.text-center
