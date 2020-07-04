@@ -416,3 +416,23 @@ i {
     }
   }
 }
+
+.creators {
+  color: white;
+}
+
+a.mtgcard {
+  &:hover {
+    text-decoration: underline;
+  }
+  
+  &.darker:hover, &.lighter:hover {
+    color: #7289DA;
+    filter: opacity(1);
+  }
+  
+  &.darker {
+    filter: opacity(0.5);
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

@@ -54,8 +54,7 @@ const initCards = () => {
     }
     if (info) {
       cardElem
-        .attr('title', `<img src="${info.image}" width="250px" alt="${info.name}">`)
-        .attr('href', info.url);
+        .attr('title', `<img src="${info.image}" width="250px" alt="${info.name}">`);
       cardElem.find('span').text(info.name)
     } else {
       cardElem.attr('title', 'Failed to fetch ');
