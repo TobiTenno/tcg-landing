@@ -15,14 +15,13 @@ html
       
       .inner.d-flex.flex-column
         section.d-flex.justify-content-center.flex-wrap
-          .text.mx-auto
+          .text
             h4.text-center What is it? It's a big competition!
-            embed(
-              src="https://clips.twitch.tv/embed?clip=SourCrazyCakeUWot&parent=canadageeks.ml"
-              frameborder="0"
+          div.embed-responsive.embed-responsive-16by9.mt-n5
+            embed.embed-responsive-item(
+              src="https://clips.twitch.tv/embed?clip=SourCrazyCakeUWot&parent=localhost&parent=canadageeks.ml"
               allowfullscreen="true"
               scrolling="no"
-              width="100%"
               autoplay="false")
 
           .text.mx-auto
