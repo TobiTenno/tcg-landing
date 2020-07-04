@@ -11,7 +11,8 @@ const initTooltips = () => {
 const safeGetCache = () => {
   const rawCache = localStorage.getItem('sccache');
   try {
-    return JSON.parse(rawCache);
+    const cache = JSON.parse(rawCache);
+    return cache || {}
   } catch (ignored) {
     return {};
   }
