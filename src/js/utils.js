@@ -21,7 +21,7 @@ const safeGetCache = () => {
 const cachedCards = safeGetCache();
 
 const getCardInfo = (name) => {
-  console.log(`scryfall hit! ${name}`);
+  console.debug(`scryfall hit! ${name}`);
   const url = `https://api.scryfall.com/cards/search?q=${encodeURIComponent(name)}&format=json&pretty=false&unique=true`;
   const rawscryfall = $.ajax({
     type: 'GET',
@@ -46,7 +46,7 @@ const initCards = () => {
     let info;
     const cacheHits = Object.keys(cachedCards).find(cache => cache.includes(card));
     if (cacheHits) {
-      console.log(`cache hit! ${cacheHits}`);
+      console.debug(`cache hit! ${cacheHits}`);
       info = cachedCards[cacheHits];
     } else {
       info = getCardInfo(card);
