@@ -1,0 +1,83 @@
+- const page = 'playlists'
+include mixins/user
+include mixins/channel
+include mixins/game
+
+html
+  include /partials/head.pug
+  head
+    title TCG | Playlists
+  body
+    .container.d-flex.flex-column
+      include /partials/header.pug
+      .inner
+        .text
+          div.accordion.dark#playlist-accordion
+            div.card
+              div.card-header.links-supressor#youtube-casual-head
+                h2.mb-0
+                  button.btn.btn-link.btn-block.text-left(
+                    type="button" data-toggle="collapse"
+                    data-target="#youtube-casual" aria-expanded="true"
+                    aria-controls="youtube-casual")
+                    | Thursday Casual Streams
+              div.card-body.collapse.show#youtube-casual(
+                aria-labelledby="#youtube-casual-head"
+                data-parent="#playlist-accordion"
+                )
+                div.embed-responsive.embed-responsive-16by9.card-body
+                  embed.embed-responsive-item(
+                    src="https://youtube.com/embed/videoseries?list=PLlr620PwoJIvLkptMq7k_f99N3dkiPVqM"
+                    allow="autolay;encrypted-media" allowfullscreen)
+
+            div.card
+              div.card-header.links-supressor#youtube-sunday-head
+                h2.mb-0
+                  button.btn.btn-link.btn-block.text-left(
+                    type="button" data-toggle="collapse"
+                    data-target="#youtube-sunday" aria-expanded="true"
+                    aria-controls="youtube-sunday")
+                    | Sunday Night Commander
+              div.card-body.collapse#youtube-sunday(
+                aria-labelledby="#youtube-casual-head"
+                data-parent="#playlist-accordion"
+                )
+                div.embed-responsive.embed-responsive-16by9.card-body
+                  embed.embed-responsive-item(
+                    src="https://youtube.com/embed/videoseries?list=PLlr620PwoJItWGQtWptge2n7dOIeUT4Y_"
+                    allow="autolay;encrypted-media" allowfullscreen)
+
+            div.card
+              div.card-header.links-supressor#youtube-podcast-head
+                h2.mb-0
+                  button.btn.btn-link.btn-block.text-left(
+                    type="button" data-toggle="collapse"
+                    data-target="#youtube-podcast" aria-expanded="true"
+                    aria-controls="youtube-podcast")
+                    | Commander Podcast
+              div.card-body.collapse#youtube-podcast(
+                aria-labelledby="#youtube-podcast-head"
+                data-parent="#playlist-accordion"
+                )
+                div.embed-responsive.embed-responsive-16by9.card-body
+                  embed.embed-responsive-item(
+                    src="https://youtube.com/embed/videoseries?list=PLlr620PwoJIsrZVjHRI-Iydgq2Zi_Tcv-"
+                    allow="autolay;encrypted-media" allowfullscreen)
+
+            div.card
+              div.card-header.links-supressor#youtube-openings-head
+                h2.mb-0
+                  button.btn.btn-link.btn-block.text-left(
+                    type="button" data-toggle="collapse"
+                    data-target="#youtube-openings" aria-expanded="true"
+                    aria-controls="youtube-openings")
+                    | Sealed Openings
+              div.card-body.collapse#youtube-openings(
+                aria-labelledby="#youtube-openings-head"
+                data-parent="#playlist-accordion"
+                )
+                div.embed-responsive.embed-responsive-16by9.card-body
+                  embed.embed-responsive-item(
+                    src="https://youtube.com/embed/videoseries?list=PLlr620PwoJIuMgCArFN2bnBiMsTxI-C1_"
+                    allow="autolay;encrypted-media" allowfullscreen)
+      include /partials/footer.pug

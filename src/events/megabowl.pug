@@ -15,20 +15,16 @@ html
       
       .inner.d-flex.flex-column
         section.d-flex.justify-content-center.flex-wrap
-          .text
-            h4.text-center What is it? It's a big competition!
-          div.embed-responsive.embed-responsive-16by9.mt-n5
+          div.embed-responsive.embed-responsive-16by9.mt-3
             embed.embed-responsive-item(
-              src="https://clips.twitch.tv/embed?clip=SourCrazyCakeUWot&parent=localhost&parent=canadageeks.ml"
-              allowfullscreen="true"
-              scrolling="no"
-              autoplay="false")
-
+              src='https://www.youtube.com/embed/n0m-tuMJcok'
+              allowfullscreen='true'
+              scrolling='no'
+              allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture')
           .text.mx-auto
             h4.text-center When is this epic showdown?
             p.text-center
               | Each match time will be announced, along with the commanders that will be participating. The Tournament will be on August 1st.
-
           .text.mx-auto
             h4.text-center Creators you say?
             p.text-center
@@ -38,7 +34,7 @@ html
             div.creators.text-center
               div.creator.mb-5
                 h5 Cardboard Command &nbsp;
-                  a.links-suppressor(href="https://linktr.ee/cardboardcommand")
+                  a.links-suppressor(href='https://linktr.ee/cardboardcommand')
                     i.fas.fa-external-link-alt.fa-sm
                 span
                   +card('Dakkon Blackblade')
@@ -48,7 +44,7 @@ html
                   +card('Rona, Disciple of Gix')
               div.creator.mb-5
                 h5 Elder Dragon Skypelander &nbsp;
-                  a.links-suppressor(href="https://linktr.ee/elderdragonskypelander")
+                  a.links-suppressor(href='https://linktr.ee/elderdragonskypelander')
                     i.fas.fa-external-link-alt.fa-sm
                 span
                   +card('Kambal, Consul of Allocation')
@@ -58,7 +54,7 @@ html
                   +card('Dalakos, Crafter of Wonders')
               div.creator.mb-5
                 h5 Into the 99 Podcast &nbsp;
-                  a.links-suppressor(href="https://linktr.ee/Intothe99")
+                  a.links-suppressor(href='https://linktr.ee/Intothe99')
                     i.fas.fa-external-link-alt.fa-sm
                 span
                   +card('Omnath, Locus of the Roil')
@@ -68,7 +64,7 @@ html
                   +card('Thantis the Warweaver')
               div.creator.mb-5
                 h5 The Canada Geeks &nbsp;
-                  a.links-suppressor(href="https://linktr.ee/Thecanadageeks")
+                  a.links-suppressor(href='https://linktr.ee/Thecanadageeks')
                     i.fas.fa-external-link-alt.fa-sm
                 span
                   +card('Sol\'kanar')
@@ -76,6 +72,5 @@ html
                   +card('Feldon of the Third Path')
                   | &nbsp;or&nbsp;
                   +card('Rashmi, Eternities Crafter')
-
 
       include ../partials/footer.pug

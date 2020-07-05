@@ -17,11 +17,13 @@
         | Events
       div.dropdown-menu(aria-labelledby='events-drop')
         a.dropdown-item(href='/events/megabowl.pug') MegaBowl
+    .line.align-self-center
+    a(href=`${page === 'playlists' ? '#' : '/playlists.pug'}` class=`${page === 'playlists' ? 'active' : ''}`) Playlists
     
   if page === 'index'
     .server-info.d-flex.align-items-center.flex-column.text-center
       h1 The Canada Geeks
-      div.d-flex.flex-row.social-links
+      div.d-flex.flex-row.social-links.mx-auto
         a.links-suppressor.btn-social.white(href='https://instagram.com/thecanadageeks')
           i(class='fab fa-instagram fa-5x')
         a.links-suppressor.btn-social.white(href='https://twitch.tv/thecanadageeks')
